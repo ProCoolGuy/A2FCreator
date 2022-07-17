@@ -1,0 +1,55 @@
+{
+  "name": "test-hardhat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@nomiclabs/hardhat-etherscan": "^2.1.7",
+    "@openzeppelin/contracts": "4.3.2",
+    "chai": "^4.3.4",
+    "dotenv-flow": "^3.2.0",
+    "fs-extra": "^10.0.0",
+    "hardhat-deploy": "^0.9.8",
+    "hardhat-gas-reporter": "^1.0.4",
+    "path": "^0.12.7",
+    "recursive-fs": "^2.1.0",
+    "solidity-coverage": "^0.7.17"
+  },
+  "scripts": {
+    "clean": "npx hardhat clean && rimraf ./src/contracts.json",
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile",
+    "deploy:kovan": "npx hardhat --network kovan deploy",
+    "deploy:rinkeby": "npx hardhat --network rinkeby deploy",
+    "build-contracts": "sol-merger \"./contracts/*.sol\" ./build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.7",
+    "hardhat": "2.6.5",
+    "sol-merger": "^4.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
